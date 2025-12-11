@@ -1,18 +1,9 @@
-#ifndef READCLASS_H
-#define READCLASS_H
+#include "ReadClass.h"
 
-#include <string>
-#include <vector>
+int main() {
+    ReadClass rc("main.cpp");   // file to read
+    rc.process();
+    rc.printResult();
 
-class ReadClass {
-private:
-    std::string filename;
-    std::vector<std::string> classNames;
-
-public:
-    ReadClass(const std::string &fname);
-    void process();
-    void printResult() const;
-};
-
-#endif
+    return 0;
+}
